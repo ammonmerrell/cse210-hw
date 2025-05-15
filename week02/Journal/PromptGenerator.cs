@@ -8,6 +8,6 @@ public class PromptGenerator
     public string GetRandomPrompt()
     {
         
-        return _prompts;
+        return _prompts[1];
     }
 }
