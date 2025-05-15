@@ -7,10 +7,12 @@ class Program
         Console.WriteLine("Hello World! This is the Journal Project.");
         Journal newJournal = new Journal();
         Entry entry1 = new Entry();
-        entry1._date = "5/15/2025";
-        entry1._promptText = "Who was the most entertaining person today?";
-        entry1._entryText = "Hello, today I ...";
-        entry1.Display();
+        PromptGenerator promptGen1 = new PromptGenerator();
+        List<string> theList = new List<string>() { "a", "b", "c", "d", "e" };
+        string a = "";
+        promptGen1._prompts = theList;
+        a = promptGen1.GetRandomPrompt();
+        Console.WriteLine(a);
 
     }
 }
