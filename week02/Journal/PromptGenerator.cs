@@ -1,4 +1,4 @@
-using System.Security.Cryptography.X509Certificates;
+
 
 public class PromptGenerator
 {
@@ -7,6 +7,7 @@ public class PromptGenerator
 
     public string GetRandomPrompt()
     {
+        
         return _prompts;
     }
 }
