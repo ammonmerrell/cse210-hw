@@ -1,14 +1,15 @@
 
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
+using System.IO;
 
 public class Journal
 {
     public List<string> _entry;
 
-    public void AddEntry()
+    public void AddEntry(Entry newEntry)
     {
-        Console.WriteLine($"'{_entry[0]}' was posted ");
+        Console.WriteLine($"'{newEntry}' was posted ");
     }
     public void DisplayAll()
     {
@@ -17,5 +18,27 @@ public class Journal
             Console.WriteLine($"{i} ");
         }
     }
+    public void SaveToFile(string file)
+    {
+        using (StreamWriter outputFile = new StreamWriter(file))
+        {
+            foreach (string i in _entry)
+            {
+                outputFile.WriteLine($"{i}|");
+            }
 
+        }
+    }
+    public void LoadFromFile(string file)
+    {
+        string[] lines = System.IO.File.ReadAllLines(file);
+        foreach (string line in lines)
+        {
+            string[] parts = line.Split("|");
+            string firstName = parts[0];
+            string lastName = parts[1];
+            Console.Write(firstName);
+            Console.WriteLine(lastName);
+        }
+    }
 }
