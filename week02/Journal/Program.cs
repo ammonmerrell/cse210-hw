@@ -20,6 +20,20 @@ class Program
             Console.WriteLine("5. Quit");
             Console.Write("Select an action: ");
             input = Console.ReadLine();
+
+            if (input == "1")
+            {
+                PromptGenerator promtGen = new PromptGenerator();
+                Entry newEntry = new Entry();
+                string prompt = "";
+                prompt = promtGen.GetRandomPrompt();
+                newEntry._promptText = prompt;
+                Console.WriteLine(prompt);
+                input = Console.ReadLine();
+                newEntry._entryText = input;
+                newEntry.Display();
+            }
+
         } while (input != "5");
         Entry entry1 = new Entry();
         PromptGenerator promptGen1 = new PromptGenerator();
