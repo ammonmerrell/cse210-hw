@@ -14,7 +14,6 @@ public class Entry
     {
         _date = _time.ToShortDateString();
         Console.WriteLine($"{_promptText} {_entryText} ({_date})");
-        
-        // Console.WriteLine(_date);
+
     }
 }

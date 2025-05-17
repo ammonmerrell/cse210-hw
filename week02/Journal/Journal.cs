@@ -9,8 +9,8 @@ public class Journal
 
     public void AddEntry(Entry newEntry)
     {
-        // _entry.Add(newEntry);
-        Console.WriteLine($"'{newEntry}' was posted ");
+        _entry.Add($"{newEntry._promptText} {newEntry._entryText} ({newEntry._date})");
+        // Console.WriteLine($"'{newEntry._promptText} {newEntry._entryText} ({newEntry._date})' ");
     }
     public void DisplayAll()
     {

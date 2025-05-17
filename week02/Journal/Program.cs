@@ -36,7 +36,7 @@ class Program
             }
             if (input == "2")
             {
-
+                newJournal.DisplayAll();
             }
         } while (input != "5");
         Entry entry1 = new Entry();
