@@ -7,21 +7,25 @@ class Program
     {
         Console.WriteLine("Hello World! This is the Journal Project.");
         Journal newJournal = new Journal();
-        Entry entry1 = new Entry();
-        // PromptGenerator promptGen1 = new PromptGenerator();
-        List<string> theList = new List<string>() { "a", "b", "c", "d", "e" };
-        string a = "";
-        newJournal._entry = theList;
-        // a = promptGen1.GetRandomPrompt();
-        // Console.WriteLine(a);
-        newJournal.AddEntry(entry1);
-        newJournal.DisplayAll();
+        string input = "";
+        do
+        {
 
-        Console.Write("Enter a file to save:");
-        a = Console.ReadLine();
-        newJournal.SaveToFile(a);
-        Console.WriteLine("loading from file...");
-        newJournal.LoadFromFile(a);
+
+            Console.WriteLine("Welcome to the Journal Program! Please select one of the following choices.");
+            Console.WriteLine("1. Write");
+            Console.WriteLine("2. Display");
+            Console.WriteLine("3. Load");
+            Console.WriteLine("4. Save");
+            Console.WriteLine("5. Quit");
+            Console.Write("Select an action: ");
+            input = Console.ReadLine();
+        } while (input != "5");
+        Entry entry1 = new Entry();
+        PromptGenerator promptGen1 = new PromptGenerator();
+
+        
+        
         
     }
 }
