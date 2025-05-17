@@ -5,10 +5,11 @@ using System.IO;
 
 public class Journal
 {
-    public List<string> _entry;
+    public List<string> _entry = new List<string>();
 
     public void AddEntry(Entry newEntry)
     {
+        // _entry.Add(newEntry);
         Console.WriteLine($"'{newEntry}' was posted ");
     }
     public void DisplayAll()

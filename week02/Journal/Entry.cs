@@ -12,8 +12,9 @@ public class Entry
 
     public void Display()
     {
-        Console.WriteLine($"'{_promptText} {_entryText}' was posted on {_date}");
         _date = _time.ToShortDateString();
-        Console.WriteLine(_date);
+        Console.WriteLine($"{_promptText} {_entryText} ({_date})");
+        
+        // Console.WriteLine(_date);
     }
 }

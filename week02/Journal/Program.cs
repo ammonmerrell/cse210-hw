@@ -32,8 +32,12 @@ class Program
                 input = Console.ReadLine();
                 newEntry._entryText = input;
                 newEntry.Display();
+                newJournal.AddEntry(newEntry);
             }
+            if (input == "2")
+            {
 
+            }
         } while (input != "5");
         Entry entry1 = new Entry();
         PromptGenerator promptGen1 = new PromptGenerator();
