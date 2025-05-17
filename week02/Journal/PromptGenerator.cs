@@ -1,4 +1,4 @@
-
+// I added the 2nd prompt asking about an activity, and the 5th prompt asking about your favorite food, while the other three were based on the given prompts.
 
 public class PromptGenerator
 {
