@@ -38,6 +38,18 @@ class Program
             {
                 newJournal.DisplayAll();
             }
+            if (input == "3")
+            {
+                Console.Write("Enter the name of the file to load from: ");
+                input = Console.ReadLine();
+                newJournal.LoadFromFile(input);
+            }
+            if (input == "4")
+            {
+                Console.Write("Enter the name of the file to save to: ");
+                input = Console.ReadLine();
+                newJournal.SaveToFile(input);
+            }
         } while (input != "5");
         Entry entry1 = new Entry();
         PromptGenerator promptGen1 = new PromptGenerator();
