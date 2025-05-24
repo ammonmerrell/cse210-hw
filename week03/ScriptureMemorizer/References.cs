@@ -3,9 +3,9 @@ using System.Data;
 class Reference
 {
     
-    private list<string> _references = new list<string> { "Proverbs 5-6", "2 Nephi 2:25" };
+    private List<string> _references = new List<string>{"Proverbs 5-6", "2 Nephi 2:25"};
     public int _index;
-    public string _text;
+    private string _text;
     private int _number;
     private int _verse;
 
@@ -14,15 +14,16 @@ class Reference
 
     public string GetVerse()
     {
-        _verse = GetRandomNumber()
-        _text = _references[_verse]
+        _verse = 0;
+        _verse = GetRandomNumber();
+        _text = _references[_verse];
         return _text;
     }
-    //private int GetIndex(verse)
-    //{
-    //    _index = GetRandomNumber();
-    //    return _index;
-    //}
+    private int GetIndex()
+    {
+        _index = GetRandomNumber();
+        return _index;
+    }
     private int GetRandomNumber()
     {
         _number = _random.Next(1, 2);
