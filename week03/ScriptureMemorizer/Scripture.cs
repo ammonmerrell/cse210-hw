@@ -4,9 +4,10 @@ class Scripture
 {
     private List<string> _scriptures = new List<string>{"5 Trust in the Lord with all thine heart; and lean not unto thine own understanding. 6 In all thy ways acknowledge him, and he shall direct thy paths.", "25 Adam fell that men might be; and men are, that they might have joy."};
 
+
     public String GetScripture()
     {
-        return _scriptures[1];
+        return _scriptures[0];
     }
     public int HideWord()
     {
