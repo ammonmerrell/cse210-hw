@@ -4,7 +4,7 @@ class Reference
 {
     
     private List<string> _references = new List<string>{"Proverbs 5-6", "2 Nephi 2:25"};
-    public int _index;
+    private int _index;
     private string _text;
     private int _number;
     private int _verse;
@@ -29,4 +29,7 @@ class Reference
         _number = _random.Next(1, 2);
         return _number;
     }
+
+    //new person(number1)
+   // new person(number1, number2)
 }
