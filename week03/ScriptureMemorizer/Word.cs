@@ -55,36 +55,5 @@ class Word
         // _output = _random.Next(0, _script.Count);
 
     }
-    public void HideRandomWord(string _string)
-    {
-        _output = _string.Split(" ");
-        // _random.Next(0, _string.Count);
-
-        foreach (string i in _output)
-        {
-            _dummy = i;
-            _limit++;
-
-        }
-
-        _hide = _random.Next(1, _limit) - 1;
-        _output[_hide] = "_";
-        _hide = _random.Next(1, _limit) - 1;
-        _output[_hide] = "_";
-        _hide = _random.Next(1, _limit) - 1;
-        _output[_hide] = "_";
-
-        foreach (string i in _output)
-        {
-            _dummy = i;
-            _limit++;
-            Console.Write(_dummy);
-            Console.Write(" ");
-        }
-
-
-
-        // _output = _random.Next(0, _script.Count);
-
-    }
+    
 }

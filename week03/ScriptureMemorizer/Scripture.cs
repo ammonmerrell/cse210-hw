@@ -27,11 +27,7 @@ class Scripture
         _str = _word.GetRandomWord(_scrip);
         return _str;
     }
-    public void RemoveWord()
-    {
-        Word _word = new Word();
-        _word.HideRandomWord(_scrip);
-    }
+    
     private bool BookIsHidden()
     {
         if (_scriptures[1] == "_")
