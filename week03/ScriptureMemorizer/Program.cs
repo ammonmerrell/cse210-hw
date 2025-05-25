@@ -26,7 +26,7 @@ class Program
         Console.WriteLine();
         Console.WriteLine("Press enter to remove words, press 'quit' to finish.");
         _input = Console.ReadLine();
-        _aScripture.HideWord();
+        _list = _aScripture.HideWord();
 
         while (_input == "")
         {
