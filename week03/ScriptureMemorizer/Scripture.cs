@@ -7,6 +7,7 @@ class Scripture
 
     private string _str;
     private string _scrip;
+    int state;
     private Random _random = new Random();
 
     public String GetScripture(int _int)
@@ -14,17 +15,22 @@ class Scripture
         _scrip = _scriptures[_int];
         return _scrip;
     }
-    public void HideWord()
+    public string HideWord()
     {
-        int _state;
+
         // if (BookIsHidden())
         // {
         // _state = 0;
         // return _state;
         // }
-        Console.Clear();
         Word _word = new Word();
-        _word.GetRandomWord(_scrip);
+        _str = _word.GetRandomWord(_scrip);
+        return _str;
+    }
+    public void RemoveWord()
+    {
+        Word _word = new Word();
+        _word.HideRandomWord(_scrip);
     }
     private bool BookIsHidden()
     {
