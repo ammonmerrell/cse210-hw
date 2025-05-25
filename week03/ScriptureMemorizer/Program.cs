@@ -1,22 +1,40 @@
 using System;
-
+using System.Collections.Generic;
 class Program
 {
     static void Main(string[] args)
     {
         Console.WriteLine("Hello World! This is the ScriptureMemorizer Project.");
-        Scripture aScripture = new Scripture();
-        string Scrip = "";
-        int state = 1;
-        Scrip = aScripture.GetScripture();
-        Console.WriteLine(Scrip);
+        Scripture _aScripture = new Scripture();
+        string _scrip = "";
+        int _index;
+        int _num;
+        string _input = "";
+        while (_input == "")
+        {
+            Reference aRef = new Reference();
+            _index = aRef.GetRandomNumber();
+            _scrip = aRef.GetVerse(_index);
+            Console.WriteLine(_scrip);
 
-        Reference aRef = new Reference();
+            _scrip = _aScripture.GetScripture(_index);
+            Console.WriteLine(_scrip);
+            Console.WriteLine("Press enter to remove words, press 'quit' to finish.");
+            _input = Console.ReadLine();
+            _aScripture.HideWord();
+            
 
-        //state = aScripture.HideWord();
-        //if (state == 1)
-        // {
+            // List<string> words = new List<string>();
 
-        // }
+            // words.Add("phone");
+            // words.Add("keyboard");
+            // words.Add("mouse");
+            // foreach (string i in words)
+            // {
+            //     Console.Write(" ");
+            //  Console.Write(i);   
+            // }
+
+        }
     }
 }

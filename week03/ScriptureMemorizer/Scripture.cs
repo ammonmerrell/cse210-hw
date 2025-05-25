@@ -2,25 +2,29 @@ using System.Data;
 
 class Scripture
 {
-    private List<string> _scriptures = new List<string>{"5 Trust in the Lord with all thine heart; and lean not unto thine own understanding. 6 In all thy ways acknowledge him, and he shall direct thy paths.", "25 Adam fell that men might be; and men are, that they might have joy."};
+    private List<string> _scriptures = new List<string>{"Trust in the Lord with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths.", "Adam fell that men might be; and men are, that they might have joy."};
+    private List<Word> _words;
 
+    private string _str;
+    private string _scrip;
+    private Random _random = new Random();
 
-    public String GetScripture()
+    public String GetScripture(int _int)
     {
-        return _scriptures[0];
+        _scrip = _scriptures[_int];
+        return _scrip;
     }
-    public int HideWord()
+    public void HideWord()
     {
-        int state;
-        if (BookIsHidden())
-        {
-            state = 0;
-            return state;
-        }
+        int _state;
+        // if (BookIsHidden())
+        // {
+        // _state = 0;
+        // return _state;
+        // }
         Console.Clear();
-        _scriptures[1] = "_";
-        state = 1;
-        return state;
+        Word _word = new Word();
+        _word.GetRandomWord(_scrip);
     }
     private bool BookIsHidden()
     {
