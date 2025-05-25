@@ -46,12 +46,12 @@ class Word
         {
             _dummy = i;
             _limit++;
-            _hidden = _output + i;
+            _hidden = _hidden + " " + i;
             Console.Write(_dummy);
             Console.Write(" ");
         }
 
-        return _dummy;
+        return _hidden;
         // _output = _random.Next(0, _script.Count);
 
     }

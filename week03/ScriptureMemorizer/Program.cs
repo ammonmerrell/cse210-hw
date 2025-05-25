@@ -11,7 +11,9 @@ class Program
         int _index;
         int _num;
         string _input = "";
+        string _src ="";
         string _list;
+    
         
             
         Reference aRef = new Reference();
@@ -26,7 +28,10 @@ class Program
         Console.WriteLine();
         Console.WriteLine("Press enter to remove words, press 'quit' to finish.");
         _input = Console.ReadLine();
-        _list = _aScripture.HideWord();
+        _list = _aScripture.HideWord(_src);
+
+        // Console.WriteLine("|_list is |");
+        // Console.WriteLine(_list);
 
         while (_input == "")
         {
@@ -35,7 +40,11 @@ class Program
             Console.WriteLine();
             Console.WriteLine("Press enter to remove words, press 'quit' to finish.");
             _input = Console.ReadLine();
-            _list =_aScripture.HideWord();
+            _list = _aScripture.HideWord(_list);
+
+
+            // Console.WriteLine("|_list is |");
+            // Console.WriteLine(_list);
 
 
 
@@ -54,6 +63,6 @@ class Program
             //  Console.Write(i);   
             // }
 
-        } 
+        }
     }
 }
