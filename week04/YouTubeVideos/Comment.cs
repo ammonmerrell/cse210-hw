@@ -6,7 +6,7 @@ class Comment
     public string _text;
     public void DisplayComment()
     {
-        Console.WriteLine(_name);
-        Console.WriteLine(_text);
+        Console.Write($"{_name} ");
+        Console.WriteLine($" \"{_text}\"");
     }
 }
