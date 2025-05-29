@@ -21,4 +21,12 @@ class Product
     {
         _id = _i;
     }
+    public void SetQuan(int _q)
+    {
+        _quantity = _q;
+    }
+    public void SetPrice(int _p)
+    {
+        _price = _p;
+    }
 }

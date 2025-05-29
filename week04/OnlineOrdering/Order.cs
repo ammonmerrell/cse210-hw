@@ -14,6 +14,15 @@ class Order
 
     private string _shipingLabel;
 
+    public void AddProduct(string _n, string _i, int _q, int _p)
+    {
+        Product NewProduct = new Product();
+        NewProduct.SetName(_n);
+        NewProduct.SetId(_i);
+        NewProduct.SetQuan(_q);
+        NewProduct.SetPrice(_p);
+
+    }
     public int TotalCost()
     {
         if (_isUSA)
