@@ -1,8 +1,10 @@
 
+using System.Net.Sockets;
+
 class Customer
 {
     private string _name;
-    private address _address;
+    private Address _address;
     private string _loc;
 
 
@@ -17,6 +19,12 @@ class Customer
     public string GetName()
     {
         return _name;
+    }
+    public void SetAddress(string _s,string _ci, string _p, string _c)
+    {
+        Address address1 = new Address();
+        address1.SetInfo( _s, _ci, _p, _c);
+        
     }
     public string GetAddress()
     {
