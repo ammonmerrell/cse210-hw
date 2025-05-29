@@ -28,16 +28,16 @@ class Order
     {
         foreach (Product i in _products)
         {
-            _name = i._name;
-            _id = i._id;
+            i.SetName(_name);
+            i.SetId(_id);
             _packingLabel = _name + " " + _id;
         }
         return _packingLabel;
     }
     private string ShipingLabel()
     {
-        _shipingLabel += Customer.name;
-        _shipingLabel += Customer.address;
+        _shipingLabel += Customer.GetName();
+        _shipingLabel += Customer._address;
         return _shipingLabel;
 
     }

@@ -13,4 +13,12 @@ class Product
         _cost = _price * _quantity;
         return _cost;
     }
+    public void SetName(string _n)
+    {
+        _name = _n;
+    }
+    public void SetId(string _i)
+    {
+        _id = _i;
+    }
 }
