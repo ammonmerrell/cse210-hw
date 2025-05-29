@@ -37,7 +37,7 @@ class Order
     private string ShipingLabel()
     {
         _shipingLabel += Customer.GetName();
-        _shipingLabel += Customer._address;
+        _shipingLabel += Customer.GetAddress();
         return _shipingLabel;
 
     }
