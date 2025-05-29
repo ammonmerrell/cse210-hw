@@ -10,5 +10,10 @@ class Program
         order1.AddProduct("Toilet Paper", "03430", 2, 15);
         order1.AddCustomer("Ben");
         order1.SetAddres("7183 S 7123 W", "Riverton", "Utah", "USA");
+        string _packingLabel;
+        string _shipingLabel;
+        _packingLabel = order1.PackingLabel();
+        _shipingLabel = order1.ShipingLabel();
+
     }
 }

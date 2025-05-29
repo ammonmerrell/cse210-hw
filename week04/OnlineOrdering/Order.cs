@@ -6,21 +6,35 @@ class Order
 {
     private List<Product> _products;
     private Customer _customer;
+    private int _count =0;
     private int _totalCost;
     private bool _isUSA;
     private string _id;
     private string _name;
+
     private string _packingLabel;
 
     private string _shipingLabel;
-
     public void AddProduct(string _n, string _i, int _q, int _p)
     {
-        Product NewProduct = new Product();
-        NewProduct.SetName(_n);
-        NewProduct.SetId(_i);
-        NewProduct.SetQuan(_q);
-        NewProduct.SetPrice(_p);
+        if (_count == 0)
+        {
+            Product product1 = new Product();
+            product1.SetName(_n);
+            product1.SetId(_i);
+            product1.SetQuan(_q);
+            product1.SetPrice(_p);
+            _count = 1;
+        }
+        else if (_count == 1)
+        {
+            Product product2 = new Product();
+            product2.SetName(_n);
+            product2.SetId(_i);
+            product2.SetQuan(_q);
+            product2.SetPrice(_p);
+        }
+        
 
     }
     public void AddCustomer(string _na)
@@ -44,7 +58,8 @@ class Order
         else _totalCost = 35;
         return _totalCost;
     }
-    private string PackingLabel()
+
+    public string PackingLabel()
     {
         foreach (Product i in _products)
         {
@@ -54,7 +69,7 @@ class Order
         }
         return _packingLabel;
     }
-    private string ShipingLabel()
+    public string ShipingLabel()
     {
         _shipingLabel += _customer.GetName();
         _shipingLabel += _customer.GetAddress();
