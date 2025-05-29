@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 
 class Order
 {
-    private List<Product> _products;
+    private List<Product> _products = new List<Product>();
     private Customer _customer;
     private int _count =0;
     private int _totalCost;
