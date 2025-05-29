@@ -23,6 +23,17 @@ class Order
         NewProduct.SetPrice(_p);
 
     }
+    public void AddCustomer(string _na)
+    {
+        Customer _customer = new Customer();
+        _customer.SetName(_na);
+    }
+    public void SetAddres(string _s, string _ci, string _p, string _c)
+    {
+        Customer _customer = new Customer();
+        _customer.SetAddress(_s, _ci, _p, _c);
+    }
+
     public int TotalCost()
     {
         if (_isUSA)
