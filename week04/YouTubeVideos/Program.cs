@@ -20,6 +20,9 @@ class Program
         Comment comment3 = new Comment();
         comment3._name = "Ben";
         comment3._text = "Hello, you showed how easy it is to clean my car!";
-        // video1._comments = comment1;
+        video1._comments.Add(comment1);
+        video1._comments.Add(comment2);
+        video1._comments.Add(comment3);
+        Console.WriteLine(video1.NumberOfComments());
     }
 }
