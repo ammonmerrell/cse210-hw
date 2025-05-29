@@ -1,0 +1,16 @@
+
+class Product
+{
+    private string _name;
+    private string _id;
+    private int _quantity;
+    private int _price;
+
+    private int _cost;
+
+    public int GetCost()
+    {
+        _cost = _price * _quantity;
+        return _cost;
+    }
+}
