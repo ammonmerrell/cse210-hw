@@ -54,25 +54,50 @@ class Order
 
     public int TotalCost()
     {
+        _isUSA = _customer.GetLocation();
+
         if (_isUSA)
         {
             _totalCost = 5;
+            // _totalCost += product1.GetCost();
+            // _totalCost += product2.GetCost();
             return _totalCost;
         }
         else _totalCost = 35;
+        // _totalCost += product1.GetCost();
+        // _totalCost += product2.GetCost();
         return _totalCost;
     }
 
     public string PackingLabel()
     {
-       
-        foreach (Product i in _products)
+        if (_count == 0)
         {
-            _n = i.GetName();
-            _iden = i.GetId();
-            _packingLabel += _n + " " + _iden;
+            Product product1 = new Product();
+            _name += product1.GetName()+"1";
+            _name += product1.GetId();
+            _name += product1.GetQuan();
+            _name += product1.GetPrice();
+
+            return _name;
+            _count = 1;
         }
-            // _packingLabel += _name + " " + _id;
+        else if (_count == 1)
+        {
+            Product product2 = new Product();
+            _name += product2.GetName();
+            _name += product2.GetId();
+            _name += product2.GetQuan();
+            _name += product2.GetPrice();
+            return _name;
+        }
+        // foreach (Product i in _products)
+        // {
+        //     _n = i.GetName();
+        //     _iden = i.GetId();
+        //     _packingLabel += _n + " " + _iden;
+        // }
+        // _packingLabel += _name + " " + _id;
         return _packingLabel;
     }
     public string ShipingLabel()
