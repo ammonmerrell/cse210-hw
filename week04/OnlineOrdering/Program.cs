@@ -12,8 +12,14 @@ class Program
         order1.SetAddres("7183 S 7123 W", "Riverton", "Utah", "USA");
         string _packingLabel;
         string _shipingLabel;
+        string _customer = "";
         _packingLabel = order1.PackingLabel();
         _shipingLabel = order1.ShipingLabel();
+        Console.WriteLine(_packingLabel);
+        Console.WriteLine(_shipingLabel);
+
+        // _customer = order1.ShowCustomerInfo();
+        // Console.WriteLine(_customer);
 
     }
 }

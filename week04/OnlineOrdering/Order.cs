@@ -11,6 +11,8 @@ class Order
     private bool _isUSA;
     private string _id;
     private string _name;
+    private string _cust;
+
 
     private string _packingLabel;
 
@@ -39,12 +41,12 @@ class Order
     }
     public void AddCustomer(string _na)
     {
-        Customer _customer = new Customer();
+        // Customer _customer = new Customer();
         _customer.SetName(_na);
     }
     public void SetAddres(string _s, string _ci, string _p, string _c)
     {
-        Customer _customer = new Customer();
+        // Customer _customer = new Customer();
         _customer.SetAddress(_s, _ci, _p, _c);
     }
 
@@ -75,5 +77,10 @@ class Order
         _shipingLabel += _customer.GetAddress();
         return _shipingLabel;
 
+    }
+    public string ShowCustomerInfo()
+    {
+        _cust = _customer.GetAddress();
+        return _cust;
     }
 }

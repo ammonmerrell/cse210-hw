@@ -22,13 +22,13 @@ class Customer
     }
     public void SetAddress(string _s,string _ci, string _p, string _c)
     {
-        Address address1 = new Address();
-        address1.SetInfo( _s, _ci, _p, _c);
+        // Address address1 = new Address();
+        _address.SetInfo( _s, _ci, _p, _c);
         
     }
     public string GetAddress()
     {
-        _address.ShowInfo();
+        _loc =_address.ShowInfo();
         return _loc;
     }
 }
