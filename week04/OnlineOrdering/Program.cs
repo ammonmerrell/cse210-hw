@@ -18,8 +18,7 @@ class Program
         Console.WriteLine(_packingLabel);
         Console.WriteLine(_shipingLabel);
 
-        // _customer = order1.ShowCustomerInfo();
-        // Console.WriteLine(_customer);
+
 
     }
 }
