@@ -12,6 +12,8 @@ class Order
     private string _id;
     private string _name;
     private string _cust;
+    private string _n;
+    private string _iden;
 
 
     private string _packingLabel;
@@ -63,12 +65,14 @@ class Order
 
     public string PackingLabel()
     {
+       
         foreach (Product i in _products)
         {
-            i.SetName(_name);
-            i.SetId(_id);
-            _packingLabel = _name + " " + _id;
+            _n = i.GetName();
+            _iden = i.GetId();
+            _packingLabel += _n + " " + _iden;
         }
+            // _packingLabel += _name + " " + _id;
         return _packingLabel;
     }
     public string ShipingLabel()
