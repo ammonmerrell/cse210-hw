@@ -4,7 +4,7 @@ using System.Collections.Generic;
 class Customer
 {
     private string _name;
-    private Address _address;
+    private Address _address = new Address();
     private string _loc;
 
 

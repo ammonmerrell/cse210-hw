@@ -5,8 +5,8 @@ using System.Runtime.CompilerServices;
 class Order
 {
     private List<Product> _products = new List<Product>();
-    private Customer _customer;
-    private int _count =0;
+    private Customer _customer = new Customer();
+    private int _count = 0;
     private int _totalCost;
     private bool _isUSA;
     private string _id;
@@ -34,7 +34,7 @@ class Order
             product2.SetQuan(_q);
             product2.SetPrice(_p);
         }
-        
+
 
     }
     public void AddCustomer(string _na)
