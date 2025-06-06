@@ -1,5 +1,6 @@
 using System;
 using System.Diagnostics;
+using System.Reflection;
 
 class Program
 {
@@ -8,6 +9,7 @@ class Program
         Console.WriteLine("Hello World! This is the Mindfulness Project.");
         Activity act = new Activity();
         Breathing bre = new Breathing();
+        Reflect refl = new Reflect();
         bre.ShowMessage();
         bre.ShowFinish();
     }
