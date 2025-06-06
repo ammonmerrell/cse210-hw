@@ -5,6 +5,6 @@ public class Reflect : Activity
     public Reflect()
     {
         _name = "Reflect Activity";
-        _description = "This activity helps you to be positive by leting you Reflect on the things that are happining in your life.";
+        _description = "This activity helps you find strength by having you reflect on times you were strong and resilient";
     }
 }
