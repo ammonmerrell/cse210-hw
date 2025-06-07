@@ -7,7 +7,7 @@ public class Activity
     protected int _seconds;
     protected DateTime _startTime = DateTime.Now;
     protected DateTime _endTime;
-    protected List<string> _animationStrings = new List<string>(){ "|", "/", "-", "\\", "|", "/", "-", "\\"};
+    protected List<string> _animationStrings = new List<string>() { "|", "/", "-", "\\", "|", "/", "-", "\\" };
     public void ShowMessage()
     {
         Console.Write($"{_name}\n\n{_description}\nEnter amount of seconds for activity: ");
@@ -16,7 +16,7 @@ public class Activity
     public void ShowFinish()
     {
         Console.WriteLine($"Good Job! You did {_name} for {_seconds} seconds!");
-        
+
     }
     public void spinner()
     {
@@ -39,8 +39,9 @@ public class Activity
     }
     public void countdown()
     {
-        for (int i = 5; i > 0; i--)
+        for (int i = _seconds; i > 0; i--)
         {
+
             Console.Write(i);
             Thread.Sleep(1000);
             Console.Write("\b \b");
