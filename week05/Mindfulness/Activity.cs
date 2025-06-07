@@ -8,6 +8,9 @@ public class Activity
     protected DateTime _startTime = DateTime.Now;
     protected DateTime _endTime;
     protected List<string> _animationStrings = new List<string>() { "|", "/", "-", "\\", "|", "/", "-", "\\" };
+
+    private int _i;
+
     public void ShowMessage()
     {
         Console.Write($"{_name}\n\n{_description}\nEnter amount of seconds for activity: ");
@@ -20,7 +23,7 @@ public class Activity
     }
     public void Spinner()
     {
-        int _i = 0;
+        _i = 0;
         _startTime = DateTime.Now;
         _endTime = _startTime.AddSeconds(_seconds);
         while (DateTime.Now < _endTime)
