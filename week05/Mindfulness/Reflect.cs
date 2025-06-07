@@ -19,24 +19,28 @@ public class Reflect : Activity
 
     public void Reflection()
     {
-        _index = _random.Next(0, 3);
-        Console.Write($"{_prompts[_index]}\nWhen you have something, type enter.");
-        _input = Console.ReadLine();
-        Console.Write("Now get ready to awnser the questions.\nYou will start in: ");
-        _placeHolder = _seconds;
-        _seconds = 5;
-        Countdown();
-        _index = _random.Next(0, 8);
-        Console.Write($"{_questions[_index]} ");
-        Spinner();
-        _index = _random.Next(0, 8);
-        Spinner();
-        Console.Write($"{_questions[_index]} ");
-        Spinner();
+        _startTime = DateTime.Now;
+        _endTime = _startTime.AddSeconds(_seconds);
+        while (DateTime.Now < _endTime)
+        {
+            _index = _random.Next(0, 3);
+            Console.Write($"{_prompts[_index]}\nWhen you have something, type enter.");
+            _input = Console.ReadLine();
+            Console.Write("Now get ready to awnser the questions.\nYou will start in: ");
+            _placeHolder = _seconds;
+            _seconds = 5;
+            Countdown();
+            _index = _random.Next(0, 8);
+            Console.Write($"{_questions[_index]} ");
+            Spinner();
+            _index = _random.Next(0, 8);
+            Spinner();
+            Console.Write($"{_questions[_index]} ");
+            Spinner();
+            
+        }
         Console.Write("\n\nWell Done!\n");
         _seconds = _placeHolder;
-
-
 
 
 
