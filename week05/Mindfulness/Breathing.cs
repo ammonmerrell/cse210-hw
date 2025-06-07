@@ -3,6 +3,7 @@ using System.Security.Cryptography.X509Certificates;
 
 public class Breathing : Activity
 {
+    private int _placeHolder;
     public Breathing()
     {
         _name = "Breathing Activity";
@@ -11,7 +12,7 @@ public class Breathing : Activity
     }
     private void BreathingActivity()
     {
-        int _placeHolder;
+       
         _placeHolder = _seconds;
         _startTime = DateTime.Now;
         _endTime = _startTime.AddSeconds(_seconds);
