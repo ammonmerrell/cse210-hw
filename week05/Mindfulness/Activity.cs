@@ -18,7 +18,7 @@ public class Activity
         Console.WriteLine($"Good Job! You did {_name} for {_seconds} seconds!");
 
     }
-    public void spinner()
+    public void Spinner()
     {
         int _i = 0;
         _startTime = DateTime.Now;
@@ -37,7 +37,7 @@ public class Activity
             }
         }
     }
-    public void countdown()
+    public void Countdown()
     {
         for (int i = _seconds; i > 0; i--)
         {
@@ -46,6 +46,6 @@ public class Activity
             Thread.Sleep(1000);
             Console.Write("\b \b");
         }
-        Console.WriteLine("done");
+        // Console.WriteLine("done");
     }
 }

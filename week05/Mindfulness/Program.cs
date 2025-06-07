@@ -11,10 +11,9 @@ class Program
         Breathing bre = new Breathing();
         Reflect refl = new Reflect();
         Listing lis = new Listing();
-        lis.ShowMessage();
+        // lis.ShowMessage();
         // lis.ShowFinish();
-        lis.spinner();
-        // act.countdown();
-        
+        // lis.spinner();
+        bre.Run();
     }
 }
