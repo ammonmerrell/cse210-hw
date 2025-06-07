@@ -31,9 +31,9 @@ public class Reflect : Activity
         Spinner();
         _index = _random.Next(0, 8);
         Spinner();
-        Console.Write($"{_questions[_index]} \n");
+        Console.Write($"{_questions[_index]} ");
         Spinner();
-        Console.Write("\n\nWell Done!");
+        Console.Write("\n\nWell Done!\n");
         _seconds = _placeHolder;
 
 
@@ -45,5 +45,6 @@ public class Reflect : Activity
     {
         ShowMessage();
         Reflection();
+        ShowFinish();
     }
 }
