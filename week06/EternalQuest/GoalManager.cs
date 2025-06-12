@@ -8,7 +8,7 @@ public class GoalManager
     }
     public void DisplayPlayerInfo()
     {
-
+        Console.WriteLine($"You have {_points} points.");
     }
     public void ListGoalNames()
     {
