@@ -22,7 +22,7 @@ public class Goal
         return $"[{_isComplete}] {_name} {_pointValue}";
     }
     
-    public string GetStringRep()
+    public virtual string GetStringRep()
     {
         if (_isComplete)
         {
