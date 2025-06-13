@@ -19,11 +19,6 @@ public class Goal
 
     public virtual string GetDetailString()
     {
-        return $"[{_isComplete}] {_name} {_pointValue}";
-    }
-    
-    public virtual string GetStringRep()
-    {
         if (_isComplete)
         {
             _checkmark = "X";
@@ -32,6 +27,12 @@ public class Goal
         {
             _checkmark = " ";
         }
+        return $"[{_checkmark}] {_name} {_pointValue}";
+    }
+    
+    public virtual string GetStringRep()
+    {
+        
         return $"{_isComplete},{_name},{_pointValue}";
 
     }
