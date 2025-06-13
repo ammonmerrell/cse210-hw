@@ -3,6 +3,12 @@ public class ChecklistGoal : Goal
     private int _current;
     private int _goal;
     private int _finishPoints;
+    public override void CreatGoal(string name, string desc, int value)
+    {
+        Console.Write("How many times will you do this in order to be complete? Enter:");
+        _goal = int.Parse(Console.ReadLine());
+        base.CreatGoal(name, desc, value);
+    }
     public override int RecordEvent()
     {
         _current++;
