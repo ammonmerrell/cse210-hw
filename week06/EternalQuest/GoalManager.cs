@@ -42,9 +42,9 @@ public class GoalManager
             checGoal.CreatGoal(name, desc, value);
         }
     }
-    public void RecordEvent()
+    public void RecordEvent(int goal)
     {
-
+        Console.WriteLine(_goals[goal].GetDetailString()); //this is placeholder for when I pickup next.
     }
     public void SaveGoal(string destination)
     {

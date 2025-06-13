@@ -50,7 +50,10 @@ class Program
             }
             if (input == "5")
             {
-                goalman.RecordEvent();
+                goalman.ListGoalDetails();
+                Console.Write("What Goal did you do? Type number of goal 1 is top/first goal. Enter:");
+                input = Console.ReadLine();
+                goalman.RecordEvent(int.Parse(input)-1);
             }
         }
         goalman.run();

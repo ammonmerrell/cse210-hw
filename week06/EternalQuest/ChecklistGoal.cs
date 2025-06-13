@@ -20,7 +20,7 @@ public class ChecklistGoal : Goal
     }
     public override string GetDetailString()
     {
-        return $"[{_checkmark}] {_name} {_description} {_pointValue} ({_current} of {_goal})";
+        return $"[{_checkmark}] {_name}: {_description} {_pointValue} ({_current} of {_goal})";
     }
     public override string GetStringRep()
     {
