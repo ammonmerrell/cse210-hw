@@ -6,7 +6,7 @@ public class Goal
     protected bool _isComplete;
     protected string _checkmark;
 
-    public void CreatGoal(string name, string desc, int value)
+    public virtual void CreatGoal(string name, string desc, int value)
     {
         _name = name;
         _description = desc;

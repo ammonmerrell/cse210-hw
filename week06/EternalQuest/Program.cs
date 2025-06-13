@@ -7,6 +7,9 @@ class Program
         Console.WriteLine("Hello World! This is the EternalQuest Project.");
         GoalManager goalman = new GoalManager();
         string input = "";
+        string name = "";
+        string desc ="";
+        int value = 0;
         while (input != "6")
         {
             goalman.DisplayPlayerInfo();
@@ -16,7 +19,17 @@ class Program
             input = Console.ReadLine();
             if (input == "1")
             {
-                goalman.CreateGoal();
+                Console.Write("What Goal do you want to create? 1 simple, 2 Eternal, or 3 Checklist goal? Enter Here:");
+                input = Console.ReadLine();
+                Console.Write("What is the name of the goal? Enter Here:");
+                name = Console.ReadLine();
+                Console.Write("What is the description of the goal? Enter Here:");
+                desc = Console.ReadLine();
+                Console.Write("How many points do you want to get from doing this goal? Enter Here:");
+                value = int.Parse(Console.ReadLine());
+                goalman.CreateGoal(input, name,desc,value);
+
+
             }
             if (input == "2")
             {
