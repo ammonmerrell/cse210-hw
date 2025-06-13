@@ -20,7 +20,7 @@ public class GoalManager
     }
     public void CreateGoal()
     {
-
+        
     }
     public void RecordEvent()
     {
