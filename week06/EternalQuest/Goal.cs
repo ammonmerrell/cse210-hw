@@ -27,7 +27,7 @@ public class Goal
         {
             _checkmark = " ";
         }
-        return $"[{_checkmark}] {_name} {_pointValue}";
+        return $"[{_checkmark}] {_name}: {_description} {_pointValue}";
     }
     
     public virtual string GetStringRep()

@@ -16,7 +16,10 @@ public class GoalManager
     }
     public void ListGoalDetails()
     {
-
+        foreach (Goal goal in _goals)
+        {
+            Console.WriteLine(goal.GetDetailString());
+        }
     }
     public void CreateGoal(string type, string name, string desc, int value)
     {
@@ -43,12 +46,26 @@ public class GoalManager
     {
 
     }
-    public void SaveGoal()
+    public void SaveGoal(string destination)
     {
-
+        using (StreamWriter outputFile = new StreamWriter(destination))
+        {
+            foreach (Goal goal in _goals) {
+                outputFile.WriteLine(goal.GetStringRep());
+        }
+            }
+            
     }
-    public void LoadGoal()
+    public void LoadGoal(string destination)
     {
-        
+        string[] lines = System.IO.File.ReadAllLines(destination);
+        foreach (string line in lines)
+        {
+            string[] parts = line.Split(",");
+            string _isComplete = parts[0];
+            string _name = parts[1];
+            string _pointValue = parts[2];
+            Console.WriteLine($"{_isComplete} {_name} {_pointValue}");
+        }
     }
 }
