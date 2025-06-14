@@ -5,9 +5,11 @@ public class Goal
     protected int _pointValue;
     protected bool _isComplete;
     protected string _checkmark;
+    protected string _type;
 
-    public virtual void CreatGoal(string name, string desc, int value)
+    public virtual void CreatGoal(string name, string desc, int value, string type)
     {
+        _type = type;
         _name = name;
         _description = desc;
         _pointValue = value;
@@ -33,7 +35,7 @@ public class Goal
     public virtual string GetStringRep()
     {
         
-        return $"{_isComplete},{_name},{_pointValue}";
+        return $"{_type},{_isComplete},{_name},{_pointValue},{_description}";
 
     }
 }

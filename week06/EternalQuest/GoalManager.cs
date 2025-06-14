@@ -1,3 +1,5 @@
+using System.Formats.Tar;
+
 public class GoalManager
 {
     private List<Goal> _goals = new List<Goal>();
@@ -18,6 +20,7 @@ public class GoalManager
     {
         foreach (Goal goal in _goals)
         {
+
             Console.WriteLine(goal.GetDetailString());
         }
     }
@@ -27,19 +30,19 @@ public class GoalManager
         {
             SimpleGoal simGoal = new SimpleGoal();
             _goals.Add(simGoal);
-            simGoal.CreatGoal(name, desc, value);
+            simGoal.CreatGoal(name, desc, value, type);
         }
         if (type == "2")
         {
             EternalGoal eterGoal = new EternalGoal();
             _goals.Add(eterGoal);
-            eterGoal.CreatGoal(name, desc, value);
+            eterGoal.CreatGoal(name, desc, value, type);
         }
         if (type == "3")
         {
             ChecklistGoal checGoal = new ChecklistGoal();
             _goals.Add(checGoal);
-            checGoal.CreatGoal(name, desc, value);
+            checGoal.CreatGoal(name, desc, value, type);
         }
     }
     public void RecordEvent(int goal)
@@ -62,10 +65,20 @@ public class GoalManager
         foreach (string line in lines)
         {
             string[] parts = line.Split(",");
-            string _isComplete = parts[0];
-            string _name = parts[1];
-            string _pointValue = parts[2];
-            Console.WriteLine($"{_isComplete} {_name} {_pointValue}");
+            string _type = parts[0];
+            string _isComplete = parts[1];
+            string _name = parts[2];
+            string _placeHolder = parts[3];
+            int _pointValue = int.Parse(_placeHolder);
+            string _description = parts[4];
+            if (parts[5] != null)
+            {
+                string _current = parts[5];
+                string _goal = parts[6];
+                CreateGoal(_type, _name, _description, _pointValue);
+            }
+            
+            ListGoalDetails();
         }
     }
 }
