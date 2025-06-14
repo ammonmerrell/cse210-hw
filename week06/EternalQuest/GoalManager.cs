@@ -44,7 +44,7 @@ public class GoalManager
     }
     public void RecordEvent(int goal)
     {
-        Console.WriteLine(_goals[goal].GetDetailString()); //this is placeholder for when I pickup next.
+       _points += _goals[goal].RecordEvent(); //this is placeholder for when I pickup next.
     }
     public void SaveGoal(string destination)
     {
