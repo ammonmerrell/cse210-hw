@@ -1,14 +1,20 @@
 public class ChecklistGoal : Goal
 {
     private int _current;
-    private int _goal;
-    private int _finishPoints;
+    private int _goal = 0;
+    private int _finishPoints = 0;
     public override void CreatGoal(string name, string desc, int value, string type)
     {
-        Console.Write("How many times will you do this in order to be complete? Enter:");
-        _goal = int.Parse(Console.ReadLine());
-        Console.Write("How many points do you want for completing it? Enter:");
-        _finishPoints = int.Parse(Console.ReadLine());
+        if (_goal == 0)
+        {
+         Console.Write("How many times will you do this in order to be complete? Enter:");
+        _goal = int.Parse(Console.ReadLine());   
+        }
+        if (_finishPoints == 0)
+        {
+           Console.Write("How many points do you want for completing it? Enter:");
+        _finishPoints = int.Parse(Console.ReadLine()); 
+        }
         base.CreatGoal(name, desc, value, type);
     }
     public override int RecordEvent()

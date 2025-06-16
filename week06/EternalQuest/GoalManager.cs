@@ -71,14 +71,15 @@ public class GoalManager
             string _placeHolder = parts[3];
             int _pointValue = int.Parse(_placeHolder);
             string _description = parts[4];
-            if (parts[5] != null)
+            if (_type == "3")
             {
                 string _current = parts[5];
                 string _goal = parts[6];
                 CreateGoal(_type, _name, _description, _pointValue);
             }
             
-            ListGoalDetails();
+            
         }
+        ListGoalDetails();
     }
 }

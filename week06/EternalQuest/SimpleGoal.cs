@@ -9,6 +9,14 @@ public class SimpleGoal : Goal
     public override int RecordEvent()
     {
         _isComplete = true;
+        if (_isComplete)
+        {
+            _checkmark = "X";
+        }
+        else
+        {
+            _checkmark = " ";
+        }
         return _pointValue;
     }
 }

@@ -56,6 +56,6 @@ class Program
                 goalman.RecordEvent(int.Parse(input)-1);
             }
         }
-        goalman.run();
+        
     }
 }

@@ -16,6 +16,14 @@ public class Goal
     }
     public virtual int RecordEvent()
     {
+        if (_isComplete)
+        {
+            _checkmark = "X";
+        }
+        else
+        {
+            _checkmark = " ";
+        }
         return _pointValue;
     }
 
