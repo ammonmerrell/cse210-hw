@@ -7,10 +7,19 @@ public class Running(string date, int time, double dist) : Activity(date, time)
         Console.Write(dist);
         Console.WriteLine($"{GetSummary()}");
     }
+    public override double FindDistance(double pace)
+    {
+        return pace;
+    }
     public override double FindSpeed(double dist)
     {
-        return (dist / time) * 60;
+        return dist / time * 60;
     }
+    public override double FindPace(double speed)
+    {
+        return 0.0;
+    }
+
     public override string GetSummary()
     {
         return $"{date} Running ({time}min)-Distance {dist} miles,Speed {FindSpeed(dist)}mph, Pace {FindPace(FindSpeed(dist))}min per mile";

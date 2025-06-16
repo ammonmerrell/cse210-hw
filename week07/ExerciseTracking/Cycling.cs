@@ -7,9 +7,17 @@ public class Cycling(string date, int time, double speed) : Activity(date, time)
         
         Console.WriteLine(GetSummary());
     }
+    public override double FindSpeed(double pace)
+    {
+        return pace;
+    }
     public override double FindDistance(double speed)
     {
         return speed * time / 60;
+    }
+    public override double FindPace(double speed)
+    {
+        return 60 / speed;
     }
 
     public override string GetSummary()
