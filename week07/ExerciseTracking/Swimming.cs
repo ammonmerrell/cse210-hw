@@ -1,4 +1,4 @@
-public class Swimming : Activity
+public class Swimming(string date, int time) : Activity(date, time)
 {
     
 }

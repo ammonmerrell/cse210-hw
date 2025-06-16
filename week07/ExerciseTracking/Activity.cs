@@ -1,12 +1,13 @@
 using System.ComponentModel;
 
-public class Activity
+public class Activity (string date, int time)
 {
     private DateTime _date = DateTime.Now;
     private int _time;
     private int _distance;
     private double _speed;
     private double _pace;
+
     public string SetDate()
     {
         return _date.ToShortDateString();
@@ -46,6 +47,6 @@ public class Activity
     }
     public virtual string GetSummary()
     {
-        return $"{SetDate()} activity ({_time})-Distance {_distance},Speed{_speed}mph,Pace{_pace}min per mile";
+        return $"{SetDate()} activity ({_time})-Distance {_distance},Speed {_speed}mph, Pace {_pace}min per mile";
     }
 }
