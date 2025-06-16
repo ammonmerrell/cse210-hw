@@ -17,7 +17,7 @@ public class Running(string date, int time, double dist) : Activity(date, time)
     }
     public override double FindPace(double speed)
     {
-        return 0.0;
+        return 60 /speed;
     }
 
     public override string GetSummary()
