@@ -1,3 +1,4 @@
+// added four "levels" and added code in the "DisplayPlayerInfo" method to tell the user what level they are.
 using System.Formats.Tar;
 
 public class GoalManager
@@ -10,6 +11,22 @@ public class GoalManager
     }
     public void DisplayPlayerInfo()
     {
+        if (_points < 50)
+        {
+            Console.WriteLine("You are level 1, a Basic Builder. Reach 50 points to get level 2.");
+        }
+        if (_points >= 50 && _points < 100)
+        {
+            Console.WriteLine("You have reached level 2, You are a Skilled Student! Reach 100 points for level 3.");
+        }
+        if (_points >= 100 && _points > 200)
+        {
+            Console.WriteLine("You have reached level 3, a Powerful Person!, reach 200 points for level 4, the Last Level.");
+        }
+        if (_points >= 200)
+        {
+            Console.WriteLine("You have reached level 4, the Last Level! You are now a Wise Wizard.");
+        }
         Console.WriteLine($"You have {_points} points.");
     }
     public void ListGoalNames()
