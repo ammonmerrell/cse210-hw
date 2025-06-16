@@ -12,8 +12,9 @@ class Program
 
         Running run = new Running(date, 30, 3);
         Cycling cyc = new Cycling(date, 30, 6.0);
-        Swimming swi = new Swimming(date, 30);
+        Swimming swi = new Swimming(date, 30, 33.0);
         run.Run();
         cyc.Run();
+        swi.Run();
     }
 }
