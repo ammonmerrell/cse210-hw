@@ -10,9 +10,10 @@ class Program
         DateTime datet = DateTime.Now;
         date = datet.ToShortDateString();
 
-        Running run = new Running(date, 30,3);
-        Cycling cyc = new Cycling(date, 30);
+        Running run = new Running(date, 30, 3);
+        Cycling cyc = new Cycling(date, 30, 6.0);
         Swimming swi = new Swimming(date, 30);
         run.Run();
+        cyc.Run();
     }
 }

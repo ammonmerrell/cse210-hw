@@ -2,12 +2,12 @@ using System.ComponentModel;
 
 public class Activity (string date, int time)
 {
-    
 
-    
+
+
     public virtual double FindDistance(double pace)
     {
-        return pace * 50 / 1000 * 0.62;
+        return pace;
     }
     
     public virtual double FindSpeed(double pace)
